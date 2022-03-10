@@ -95,5 +95,6 @@
         private Label label2;
         private Button BtnAceptar;
         private Button BtnRechazar;
+        private FlowLayoutPanel SecondFlowLayoutPanel;
     }
 }

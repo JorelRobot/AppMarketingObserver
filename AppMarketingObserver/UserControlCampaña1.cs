@@ -12,9 +12,25 @@ namespace AppMarketingObserver
 {
     public partial class UserControlCampaña1 : UserControl
     {
+        public EventManager eventManager { get; set; }
         public UserControlCampaña1()
         {
             InitializeComponent();
+        }
+
+        private void labelTitulo_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labelIdea_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
