@@ -30,8 +30,9 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.BtnAceptar = new System.Windows.Forms.Button();
-            this.BtnRechazar = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.fileSystemWatcher1 = new System.IO.FileSystemWatcher();
+            ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -46,44 +47,37 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(200, 41);
+            this.label2.Location = new System.Drawing.Point(193, 29);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(429, 48);
             this.label2.TabIndex = 1;
             this.label2.Text = "Revision de Campaña";
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
-            // BtnAceptar
+            // panel1
             // 
-            this.BtnAceptar.Location = new System.Drawing.Point(171, 359);
-            this.BtnAceptar.Name = "BtnAceptar";
-            this.BtnAceptar.Size = new System.Drawing.Size(94, 29);
-            this.BtnAceptar.TabIndex = 2;
-            this.BtnAceptar.Text = "Aceptar";
-            this.BtnAceptar.UseVisualStyleBackColor = true;
-            this.BtnAceptar.Click += new System.EventHandler(this.button1_Click);
+            this.panel1.AutoScroll = true;
+            this.panel1.Location = new System.Drawing.Point(12, 99);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(776, 644);
+            this.panel1.TabIndex = 2;
             // 
-            // BtnRechazar
+            // fileSystemWatcher1
             // 
-            this.BtnRechazar.Location = new System.Drawing.Point(464, 359);
-            this.BtnRechazar.Name = "BtnRechazar";
-            this.BtnRechazar.Size = new System.Drawing.Size(94, 29);
-            this.BtnRechazar.TabIndex = 3;
-            this.BtnRechazar.Text = "Rechazar";
-            this.BtnRechazar.UseVisualStyleBackColor = true;
-            this.BtnRechazar.Click += new System.EventHandler(this.BtnRechazar_Click);
+            this.fileSystemWatcher1.EnableRaisingEvents = true;
+            this.fileSystemWatcher1.SynchronizingObject = this;
             // 
             // GerenteForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.BtnRechazar);
-            this.Controls.Add(this.BtnAceptar);
+            this.ClientSize = new System.Drawing.Size(800, 755);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "GerenteForm";
             this.Text = "Form1";
+            ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -93,8 +87,8 @@
 
         private Label label1;
         private Label label2;
-        private Button BtnAceptar;
-        private Button BtnRechazar;
         private FlowLayoutPanel SecondFlowLayoutPanel;
+        private Panel panel1;
+        private FileSystemWatcher fileSystemWatcher1;
     }
 }

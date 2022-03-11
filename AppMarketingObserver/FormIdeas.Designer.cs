@@ -34,6 +34,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.btnEnviar = new System.Windows.Forms.Button();
+            this.listAprovados = new System.Windows.Forms.ListView();
+            this.label4 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -60,7 +62,7 @@
             this.txtDesc.Location = new System.Drawing.Point(75, 408);
             this.txtDesc.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtDesc.Name = "txtDesc";
-            this.txtDesc.Size = new System.Drawing.Size(763, 27);
+            this.txtDesc.Size = new System.Drawing.Size(441, 27);
             this.txtDesc.TabIndex = 2;
             // 
             // label2
@@ -89,7 +91,7 @@
             // 
             this.btnEnviar.BackColor = System.Drawing.Color.Gold;
             this.btnEnviar.Font = new System.Drawing.Font("Yu Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnEnviar.Location = new System.Drawing.Point(689, 501);
+            this.btnEnviar.Location = new System.Drawing.Point(366, 498);
             this.btnEnviar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnEnviar.Name = "btnEnviar";
             this.btnEnviar.Size = new System.Drawing.Size(150, 53);
@@ -98,11 +100,32 @@
             this.btnEnviar.UseVisualStyleBackColor = false;
             this.btnEnviar.Click += new System.EventHandler(this.btnEnviar_Click);
             // 
+            // listAprovados
+            // 
+            this.listAprovados.Location = new System.Drawing.Point(604, 228);
+            this.listAprovados.Name = "listAprovados";
+            this.listAprovados.Size = new System.Drawing.Size(451, 207);
+            this.listAprovados.TabIndex = 7;
+            this.listAprovados.UseCompatibleStateImageBehavior = false;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Gold;
+            this.label4.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label4.Location = new System.Drawing.Point(890, 182);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(165, 24);
+            this.label4.TabIndex = 8;
+            this.label4.Text = "Ideas aprovadas";
+            // 
             // FormIdeas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(914, 600);
+            this.ClientSize = new System.Drawing.Size(1082, 600);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.listAprovados);
             this.Controls.Add(this.btnEnviar);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -126,5 +149,7 @@
         private Label label2;
         private Label label3;
         private Button btnEnviar;
+        private ListView listAprovados;
+        private Label label4;
     }
 }

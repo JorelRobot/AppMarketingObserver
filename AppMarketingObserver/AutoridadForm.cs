@@ -5,6 +5,7 @@ namespace AppMarketingObserver
         private EventManager eventManager;
         private GerenteForm gerenteForm;
         private int count_ideas = 0;
+
         public AutoridadForm()
         {
             InitializeComponent();
@@ -14,6 +15,11 @@ namespace AppMarketingObserver
 
             eventManager.Suscribir(gerenteForm);
             gerenteForm.Show();
+        }
+
+        public EventManager getGerenteEventManager()
+        {
+            return gerenteForm.GetEventManager();
         }
 
         public void Actualizar(Idea idea)

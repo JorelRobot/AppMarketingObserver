@@ -1,6 +1,6 @@
 namespace AppMarketingObserver
 {
-    public partial class FormIdeas : Form
+    public partial class FormIdeas : Form, Suscriptor
     {
         private EventManager eventmanager;
         private AutoridadForm autoridadform;
@@ -12,11 +12,16 @@ namespace AppMarketingObserver
 
             eventmanager = new EventManager();
             autoridadform = new AutoridadForm();
-
+            
             eventmanager.Suscribir(autoridadform);
             autoridadform.Show();
+            autoridadform.getGerenteEventManager().Suscribir(this);
         }
 
+        public void Actualizar(Idea data)
+        {
+            listAprovados.Items.Add(data.Titulo);
+        }
 
 
         // Para enviar titulo y descripcion de la idea
